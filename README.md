@@ -15,9 +15,9 @@ Furthermore, the sources need to be cross compiled using the
 
 Example:
 ```cmake
-set(CORE_WRAPPER_DIR ${CMAKE_CURRENT_SOURCE_DIR}/ext/wrapper)
-set(CORE_WRAPPER_DEFS ...)
-set(CORE_WRAPPER_OPTS ...)
+set(CORE_WRAPPER_DIR ${CMAKE_CURRENT_SOURCE_DIR}/ext/wrapper CACHE STRING "")
+set(CORE_WRAPPER_DEFS ... CACHE STRING "")
+set(CORE_WRAPPER_OPTS ... CACHE STRING "")
 
 add_subdirectory(ext/wrapper)
 ```
