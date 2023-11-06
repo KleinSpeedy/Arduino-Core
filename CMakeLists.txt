@@ -21,23 +21,29 @@ set(CORE_WRAPPER_PINS_HEADER
     ${CORE_WRAPPER_DIR}/variants/standard
 )
 
+# Always assume Arduino UNO as standard platform
 
 #
 # Compile definitions
 #
+if(NOT DEFINED CORE_WRAPPER_DEFS)
 set(CORE_WRAPPER_DEFS
-    ""
+    "-DF_CPU=16000000UL"
 )
+endif()
 
 
 #
 # Compile options
 #
+if(NOT DEFINED )
 set(CORE_WRAPPER_OPTS
-    ""
 )
+endif()
+
 
 add_library(${PROJECT_NAME} STATIC ${core-wrapper_SRCS})
+
 target_compile_definitions(${PROJECT_NAME} PRIVATE ${CORE_WRAPPER_DEFS})
 target_compile_options(${PROJECT_NAME} PRIVATE ${CORE_WRAPPER_OPTS})
 target_include_directories(${PROJECT_NAME} PRIVATE 

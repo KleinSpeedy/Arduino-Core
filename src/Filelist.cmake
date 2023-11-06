@@ -1,5 +1,11 @@
 # Arduino core source Filelist
 
+# We ignore the new overload as well as the
+# Arduino main files because its broken
+# and not used
+
+# TODO: Make new overload an option
+
 # CPP files
 set(core-wrapper_SRCS_CPP
     ${CORE_WRAPPER_SRC_DIR}/abi.cpp
@@ -10,8 +16,8 @@ set(core-wrapper_SRCS_CPP
     ${CORE_WRAPPER_SRC_DIR}/HardwareSerial2.cpp
     ${CORE_WRAPPER_SRC_DIR}/HardwareSerial3.cpp
     ${CORE_WRAPPER_SRC_DIR}/IPAddress.cpp
-    # Ignore main.cpp
-    ${CORE_WRAPPER_SRC_DIR}/new.cpp
+    # ${CORE_WRAPPER_SRC_DIR}/main.cpp
+    # ${CORE_WRAPPER_SRC_DIR}/new.cpp
     ${CORE_WRAPPER_SRC_DIR}/PluggableUSB.cpp
     ${CORE_WRAPPER_SRC_DIR}/Print.cpp
     ${CORE_WRAPPER_SRC_DIR}/Stream.cpp
