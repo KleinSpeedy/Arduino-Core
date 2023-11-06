@@ -36,8 +36,10 @@ endif()
 #
 # Compile options
 #
-if(NOT DEFINED )
+if(NOT DEFINED CORE_WRAPPER_OPTS)
 set(CORE_WRAPPER_OPTS
+    "-mmcu=atmega328p"
+    "${CMAKE_CXX_FLAGS}"
 )
 endif()
 
