@@ -21,3 +21,16 @@ set(CORE_WRAPPER_OPTS ... CACHE STRING "")
 
 add_subdirectory(ext/wrapper)
 ```
+
+## Miscellaneous
+
+Files are simply copied from
+[ArduinoCore-avr Github repo](https://github.com/arduino/ArduinoCore-avr).
+Most files are licensed under GLPL, some are not specified or use MIT License.
+
+
+```
+TODOS:
+
+Add new options for CMake library (CDC_DISABLED, or others)
+```
