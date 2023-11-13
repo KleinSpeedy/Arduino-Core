@@ -1,4 +1,9 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.22)
+
+if(${CMAKE_VERSION} VERSION_LESS 3.22)
+    message("Using older CMake version than 3.22")
+    cmake_policy(VERSION ${CMAKE_MAJOR_VERSION}.{CMAKE_MINOR_VERSION})
+endif()
 
 project(core-wrapper
     LANGUAGES
