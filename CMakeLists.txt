@@ -53,7 +53,7 @@ add_library(${PROJECT_NAME} STATIC ${core-wrapper_SRCS})
 
 target_compile_definitions(${PROJECT_NAME} PRIVATE ${CORE_WRAPPER_DEFS})
 target_compile_options(${PROJECT_NAME} PRIVATE ${CORE_WRAPPER_OPTS})
-target_include_directories(${PROJECT_NAME} PRIVATE 
+target_include_directories(${PROJECT_NAME} PUBLIC
     ${CORE_WRAPPER_INC_DIR}
     ${CORE_WRAPPER_PINS_HEADER}
 )
