@@ -1,4 +1,9 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.22)
+
+if(${CMAKE_VERSION} VERSION_LESS 3.22)
+    message("Using older CMake version than 3.22")
+    cmake_policy(VERSION ${CMAKE_MAJOR_VERSION}.{CMAKE_MINOR_VERSION})
+endif()
 
 project(core-wrapper
     LANGUAGES
@@ -48,7 +53,7 @@ add_library(${PROJECT_NAME} STATIC ${core-wrapper_SRCS})
 
 target_compile_definitions(${PROJECT_NAME} PRIVATE ${CORE_WRAPPER_DEFS})
 target_compile_options(${PROJECT_NAME} PRIVATE ${CORE_WRAPPER_OPTS})
-target_include_directories(${PROJECT_NAME} PRIVATE 
+target_include_directories(${PROJECT_NAME} PUBLIC
     ${CORE_WRAPPER_INC_DIR}
     ${CORE_WRAPPER_PINS_HEADER}
 )
